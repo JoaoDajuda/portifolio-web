@@ -1,11 +1,8 @@
-header {
-  
-}
-
 .parallax-outer {
   background: linear-gradient(#200024, #0D0979, #00D4FF);
-  min-height: 100vh;
+  min-height: 200vh;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .montanha {
@@ -13,7 +10,7 @@ header {
     height: 40%;
     z-index: 1;
 }
-.montanha {
+.montanha2 {
     width: 100%;
     height: 40%;
     z-index: 3;
@@ -23,17 +20,11 @@ header {
     color: white;
     justify-self: center;
     font-size: 70px;
-    animation: disapear 6s forwards ease-in-out;
     z-index: 2;
+    transition: transform 2s ease-out, opacity 2s ease-out;
 }
 
-@keyframes disapear {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100% {
-    transform: translateY(50vw); 
-    opacity: 0; 
-  }
+.title.scroll {
+  transform: translateY(30vw);
+  opacity: 0;                  
 }
