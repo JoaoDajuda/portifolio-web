@@ -2,13 +2,33 @@
   background: linear-gradient(#200024, #0D0979, #00D4FF);
   min-height: 200vh;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+.parallax-alt {
+  background: linear-gradient(#FF7700, #FFDD00, #FFFF4D);
+  min-height: 200vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .montanha {
     width: 100%;
     height: 40%;
-    z-index: 1;
+    position: relative;
+    z-index: 30;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 .montanha2 {
     width: 100%;
@@ -20,11 +40,74 @@
     color: white;
     justify-self: center;
     font-size: 70px;
-    z-index: 2;
-    transition: transform 2s ease-out, opacity 2s ease-out;
+    z-index: 5;
+    transition: transform 2s ease-out, opacity 4s ease-out;
+}
+
+.text {
+  margin: 10px;
 }
 
 .title.scroll {
   transform: translateY(30vw);
-  opacity: 0;                  
+  opacity: 0;              
+  z-index: 2;    
+}
+
+.lua{
+  height: 25%; 
+  width: 25%;
+  z-index: 1;
+  position: absolute;
+  transition: transform 2s ease-out, opacity 4s ease-out;
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.8));
+}
+.lua.Sun{
+  filter: drop-shadow(0px 0px 40px rgba(255, 226, 3, 0.8));
+}
+
+.lua.scroll {
+  transform: translateY(90vh);
+  opacity: 0;
+}
+
+.groupmini {
+  position: relative;
+  display: flex;
+  width: 80%;
+  gap: 7%;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.mini {
+  background-color: #200024;
+  width: 30%;
+  height: 100%;
+  transition: transform 0.8s ease, background-color 0.3s;
+  border-radius: 5%;
+  color: white;
+  justify-content: center;
+  align-content: center;
+  font-size: 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.mini:hover{
+  transform: scale(1.5);
+}
+
+.btn-on{
+  border: white 2px solid;
+  border-radius: 5px;
+  background: none;
+  transition: transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  justify-self: left;
+  position: fixed;
+  right: 2%;
+  margin-top: 1%;
+  z-index: 1000;
+}
+.btn-on.off {
+  border: black 2px solid;
 }
