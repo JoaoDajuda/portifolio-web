@@ -27,7 +27,7 @@ function Parallax() {
     return (
         
         <div className={` ${dark ? 'parallax-alt' : 'parallax-outer'}`}>
-            <button onClick={toggleMode} className={`btn-on ${dark ? 'off' : ''}`}> {dark ? '☀️' : '🌑'} </button>
+            {/* <button onClick={toggleMode} className={`btn-on ${dark ? 'off' : ''}`}> {dark ? '☀️' : '🌑'} </button> */}
             <img src={dark ? Sun : Moon} alt='Moonzinha' className={`lua ${scrolling ? 'scroll' : ''} ${dark ? 'Sun' : ''}`}/>
             <h1 className={`title ${scrolling ? 'scroll' : ''}`}> Parallax</h1>
             <img src={Mountain} alt='Mountainha' className='montanha'/>
