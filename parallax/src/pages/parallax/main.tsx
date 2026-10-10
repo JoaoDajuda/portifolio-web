@@ -6,7 +6,6 @@ import Sun from '../../assets/sun.png'
 import { useEffect, useState } from 'react';
 
 function Parallax() {
-    const [isOn, setIsOn] = useState(false);
     const [dark, setDark] = useState(false);
     const toggleMode = () => {setDark(!dark)
     }
